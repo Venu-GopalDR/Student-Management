@@ -19,7 +19,7 @@ public class FetchRecord extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			EntityManagerFactory e=Persistence.createEntityManagerFactory("StudentCrud");
 			EntityManager m=e.createEntityManager();
-			List<Student> list=m.createNativeQuery("select * from student", Student.class).getResultList();
+			List<Student> list=m.createNativeQuery("select * from Student", Student.class).getResultList();
 			req.setAttribute("records", list);
 			req.getRequestDispatcher("fetch.jsp").include(req, resp);
 	}
