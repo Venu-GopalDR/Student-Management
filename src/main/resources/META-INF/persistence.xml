@@ -5,10 +5,11 @@
 	version="2.1">
 
 	<persistence-unit name="StudentCrud">
-		<!-- ✅ Correct position: list entity classes before <properties> -->
-		<class>Student_Crud_Operation_Servlet.Student</class>
+		
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+		<!-- ✅ Correct position: list entity classes before <properties> -->
+		<class>Student_Crud_Operation_Servlet.Student</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
