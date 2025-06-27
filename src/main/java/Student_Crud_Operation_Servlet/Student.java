@@ -3,7 +3,7 @@ package Student_Crud_Operation_Servlet;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.table;
+import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
