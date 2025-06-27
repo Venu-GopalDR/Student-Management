@@ -5,6 +5,8 @@
 	version="2.1">
 
 	<persistence-unit name="StudentCrud">
+		<!-- ✅ Correct position: list entity classes before <properties> -->
+		<class>Student_Crud_Operation_Servlet.Student</class>
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
 
@@ -20,9 +22,6 @@
 			<property name="hibernate.format_sql" value="true"/>
 			<property name="hibernate.use_sql_comments" value="true"/>
 		</properties>
-
-		<!-- ✅ Correct position: list entity classes before <properties> -->
-		<class>Student_Crud_Operation_Servlet.Student</class>
 	</persistence-unit>
 </persistence>
 
