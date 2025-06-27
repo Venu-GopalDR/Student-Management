@@ -3,6 +3,7 @@ package Student_Crud_Operation_Servlet;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.table;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(name="Student")
 public class Student {
 	@Id
 	@GeneratedValue
