@@ -8,9 +8,6 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
 
-		<!-- ✅ Correct position: list entity classes before <properties> -->
-		<class>Student_Crud_Operation_Servlet.Student</class>
-
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://43.204.97.37:3306/studentdb?createDatabaseIfNotExist=true" />
@@ -23,6 +20,9 @@
 			<property name="hibernate.format_sql" value="true"/>
 			<property name="hibernate.use_sql_comments" value="true"/>
 		</properties>
+
+		<!-- ✅ Correct position: list entity classes before <properties> -->
+		<class>Student_Crud_Operation_Servlet.Student</class>
 	</persistence-unit>
 </persistence>
 
